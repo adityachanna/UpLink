@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use proxy in development to avoid CORS issues
-const API_BASE_URL = import.meta.env.DEV ? '/api' : 'https://hacksmartb-698063521469.asia-south1.run.app/';
+const API_BASE_URL = import.meta.env.DEV ? '/api' : 'https://hacksmartb-698063521469.asia-south1.run.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
