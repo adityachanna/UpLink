@@ -1,0 +1,254 @@
+.city-insights-container {
+  padding: 2rem;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(0, 0, 0, 0.5));
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  box-shadow: 0 8px 32px rgba(34, 197, 94, 0.1);
+}
+
+.city-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.city-subtitle {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.city-selector {
+  position: relative;
+  min-width: 300px;
+}
+
+.city-selector select {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(0, 0, 0, 0.3));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.15);
+}
+
+.city-selector select:hover {
+  border-color: #22c55e;
+  box-shadow: 0 6px 24px rgba(34, 197, 94, 0.25);
+}
+
+.city-selector select:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.city-selector::after {
+  content: '▼';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #22c55e;
+  pointer-events: none;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.metric-card:hover {
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 12px 48px rgba(34, 197, 94, 0.15);
+  transform: translateY(-4px);
+}
+
+.metric-card:hover::before {
+  opacity: 1;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #22c55e;
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.risks-section,
+.insights-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.risks-section:hover,
+.insights-section:hover {
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 12px 48px rgba(34, 197, 94, 0.15);
+}
+
+.risks-section h2,
+.insights-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+.risks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.risk-item {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+  padding: 1.25rem;
+  border-radius: 12px;
+  border-left: 3px solid #ef4444;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.risk-item:hover {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.08));
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.2);
+}
+
+.risk-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(239, 68, 68, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.risk-text {
+  color: #fca5a5;
+  font-weight: 600;
+}
+
+.insight-card {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.08));
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.2);
+}
+
+.insight-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #22c55e;
+  margin: 0 0 0.75rem 0;
+}
+
+.insight-card p {
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(34, 197, 94, 0.1);
+  border-top-color: #22c55e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .city-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .city-selector {
+    width: 100%;
+  }
+}

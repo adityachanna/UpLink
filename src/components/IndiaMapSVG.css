@@ -1,0 +1,61 @@
+.india-map-svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.india-map-svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 2px solid #d4c4a8;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.state-path {
+  cursor: pointer;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.state-path:hover {
+  opacity: 0.8;
+  filter: brightness(1.1);
+}
+
+.map-legend-svg {
+  display: flex;
+  gap: 30px;
+  padding: 15px 30px;
+  background: white;
+  border: 2px solid #d4c4a8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-item-svg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #15803d;
+}
+
+.legend-color-svg {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #d4c4a8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .map-legend-svg {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
